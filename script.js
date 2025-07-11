@@ -339,10 +339,10 @@ function startSearchFromSideBar() {
 }
 
 
-function openPopup() {
+function openPopupFromSidebar() {
   document.getElementById("popupfromsidebar").style.display = "flex";
 }
 
-function closePopup() {
+function closePopupFromSidebar() {
   document.getElementById("popupfromsidebar").style.display = "none";
 }
