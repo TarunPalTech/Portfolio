@@ -1,0 +1,63 @@
+#container {
+  position: relative;
+}
+#tableContent {
+  overflow-y: auto;
+}
+
+#mainContent {
+  overflow-y: auto;
+}
+
+#tableContent li::before {
+  content: "";
+  position: absolute;
+  transform: scaleY(1);
+  border: 0.5px solid #1d1717;
+  transition: transform 0.3s ease-in-out;
+}
+
+#tableContent li:hover::before {
+  transform: scaleY(1);
+}
+
+button {
+  width: fit-content;
+  transform: translateY(-30px);
+  background-clip: padding-box;
+}
+
+#part1::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  margin-left: 5%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 10%,
+    #acabaa 10%,
+    #acabaa 100%
+  );
+  transform: translateY(-18px);
+}
+@media (max-width: 1024px) {
+  #tableContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  #tableContent.open {
+    transform: translateX(0);
+  }
+  #tableContent.closed {
+    transform: translateX(-250px);
+  }
+}
+
+section{
+  background-color: black;
+}
