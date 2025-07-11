@@ -2,7 +2,7 @@
 My personal portfolio website showcasing projects, skills, and experience as a web developer.
 
 
-📌 Extended Description for GitHub Repo
+# 📌 Extended Description for GitHub Repo
 This repository contains the source code for my personal portfolio website. As a Computer Science Engineering graduate, I built this site to showcase my technical skills, academic background, and hands-on experience through a clean, responsive, and interactive design.
 
 The site includes detailed sections such as:
