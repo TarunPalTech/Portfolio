@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Tarun Pal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+SA:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <!-- Creating Header -->
+    <header class="scrolled" id="siteHeader">
+      <div class="logo">
+        <!-- logo -->
+        <h1>Tarun | Software Engineer</h1>
+      </div>
+      <div class="navigation">
+        <!-- Creating Navbar -->
+        <nav>
+          <div class="navLinks">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li>
+                <div class="dropdown">
+                  <a
+                    href="#aboutUs"
+                    style="text-decoration: none; font-size: large"
+                    >About <span style="font-size: small">▼</span>
+                  </a>
+                  <div class="dropdown-content">
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#ourblog">Our Blog</a>
+                    <a href="javascript: void(0)">Team</a>
+                  </div>
+                </div>
+              </li>
+              <!-- <a href="#aboutUs">About</a> -->
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="search">
+            <button type="submit" onclick="openPopup()">
+              <span style="color: #fff" class="material-icons">search</span>
+            </button>
+
+            <div id="popup" class="popup">
+              <div
+                class="popup-content"
+                style="background-color: rgb(107, 18, 134)"
+              >
+                <span class="close" style="color: black" onclick="closePopup()"
+                  >&times;</span
+                >
+                <h2>Find on This Page</h2>
+                <input type="text" id="searchInput" placeholder="Search..." />
+                <button
+                  onclick="startSearch()"
+                  class="resume-button"
+                  style="
+                    font-size: large;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    border: 1px solid #fff;
+                  "
+                >
+                  Go
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="sideButton">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+
+    <!-- Sidebar with toggle button -->
+    <aside id="sidebar">
+      <span id="closingButton">X</span>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <div class="dropdown">
+            <a
+              href="#aboutUs"
+              style="text-decoration: none; font-size: large"
+              >About <span style="font-size: small">▼</span>
+            </a>
+            <div class="dropdown-content">
+              <a href="#testimonials">Testimonials</a>
+              <a href="#ourblog">Our Blog</a>
+              <a href="javascript: void(0)">Team</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="search">
+          <button
+            style="padding-right: 120px"
+            type="submit"
+            onclick="openPopup()"
+          >
+            <span style="color: #fff" class="material-icons">search</span>
+          </button>
+
+          <div id="popupfromsidebar" class="popup">
+            <div
+              class="popup-content"
+              style="background-color: rgb(107, 18, 134)"
+            >
+              <span class="close" style="color: black" onclick="closePopup()"
+                >&times;</span
+              >
+              <h2>Find on This Page</h2>
+              <input
+                type="text"
+                id="searchInputfromsidebar"
+                placeholder="Search..."
+              />
+              <button
+                onclick="startSearchFromSideBar()"
+                class="resume-button"
+                style="
+                  font-size: large;
+                  margin-top: 10px;
+                  cursor: pointer;
+                  border: 1px solid #fff;
+                "
+              >
+                Go
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Developing home section -->
+    <div style="display: flex" id="home">
+      <section id="techImage">
+        <h1 class="jump-in-1">Hello <br />I'm Tarun</h1>
+        <p class="jump-in-2">
+          Computer Science Engineer eager to develop meaningful software
+          solutions. Open to global opportunities to kick-start my career in web
+          and software development.
+        </p>
+        <button class="jump-in-3">Get A Quote</button>
+        <a class="jump-in-3" href="mailto: paltarun832@mail.com">
+          paltarun832@gmail.com
+        </a>
+      </section>
+    </div>
+
+    <!-- Developing About Us Section -->
+    <section id="aboutUs">
+      <h1>About Me</h1>
+      <div id="aboutContent">
+        <div>
+          <img src="images/pal.jpg" alt="" />
+        </div>
+        <div>
+          <h2>The Person Behind the Code</h2>
+          <p>
+            I’m Tarun Pal, a Computer Science and Engineering graduate with a
+            Diploma in CSE. As a passionate and detail-oriented software
+            developer, I enjoy turning ideas into functional, user-friendly
+            solutions. I specialize in web development and modern programming
+            tools. I’m eager to begin my professional journey, collaborate with
+            talented teams, and learn continuously. My goal is to join an
+            innovative company in Germany or internationally, where I can grow
+            as a junior developer and contribute meaningfully.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developing Testimonials -->
+    <section id="testimonials">
+      <h1>Testimonials</h1>
+      <div class="slideshow">
+        <div class="slide">
+          <p>
+            “I am a motivated and curious learner, always ready to take on
+            challenges and grow through real-world experience.”
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/tarun.png" alt="" /><span>Tarun Pal</span>
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            “Tarun was always ready to take the lead on challenging tasks. He
+            kept us organized during every phase. His dedication helped us meet
+            all our goals on time.”
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/ravi.jpg" alt="" /><span>Ravi Gangwar(Teammate)</span>
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            “Tarun is a fantastic team player with excellent communication
+            skills. He made sure everyone was clear on their tasks. Working with
+            him was truly smooth and productive.”
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/subhash.jpg" alt="" /><span
+              >Subhash Maurya(Teammate)</span
+            >
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            “He was reliable and dedicated from start to finish. Always willing
+            to help teammates and share knowledge. His consistent effort kept
+            our project on track.”
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/paras.jpg" alt="" /><span>Paras Gangwar</span>
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            "Tarun is one of the most reliable and supportive friends I know.
+            He's always ready to lend a hand or share his knowledge. I truly
+            admire his determination and positive attitude."
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/tejasv.jpg" alt="" /><span
+              >Tejasv Gupta(Friend and Classmate)</span
+            >
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            "Tarun has shown remarkable initiative and creativity throughout our
+            project. He was quick to grasp complex concepts and contributed
+            valuable ideas to improve our design. It was a pleasure to guide
+            such a motivated and capable student."
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/ratnesh.jpg" alt="" /><span
+              >Mr. Ratnesh Kumar Pandey(Mentor)</span
+            >
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            "Tarun impressed me with his strong problem-solving skills and
+            ability to manage project timelines effectively. He was always eager
+            to learn and adapt to new technologies. His commitment ensured the
+            success of our project."
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/aashish.jpg" alt="" /><span
+              >Mr. Aashish Sharma(Supervisor)</span
+            >
+          </div>
+        </div>
+        <div class="slide">
+          <p>
+            "Tarun has consistently demonstrated exceptional dedication and
+            curiosity in his academic work. He is proactive in taking on
+            challenges and collaborates well with peers and faculty alike. I am
+            confident he will excel in any professional endeavor he chooses to
+            pursue."
+          </p>
+          <div class="testimonialsProfileContainers">
+            <img src="images/gaurav.jpg" alt="" /><span
+              >Mr. Gaurav Aggarwal(Head of the Deapartment)</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button data-index="0"></button>
+        <button data-index="1"></button>
+        <button data-index="2"></button>
+        <button data-index="3"></button>
+        <button data-index="4"></button>
+        <button data-index="5"></button>
+        <button data-index="6"></button>
+        <button data-index="7"></button>
+      </div>
+    </section>
+
+    <!-- Developing section Our Blog -->
+    <section id="ourblog">
+      <h1>Our Blog</h1>
+      <div class="slider-container">
+        <button id="prev" class="nav-button">❮</button>
+
+        <div class="slider-track" id="track">
+          <div class="resume-sections card">
+            <h2>Want to learn HTML?</h2>
+            <p>Explore my GitHub repo to begin your HTML learning journey.</p>
+            <a
+              href="https://github.com/TarunPalTech/HTML"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Do you want to Learn CSS?</h2>
+            <p>
+              Explore my GitHub repository to begin your CSS learning journey.
+            </p>
+            <a
+              href="https://github.com/TarunPalTech/CSS"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Want to Learn JavaScript?</h2>
+            <p>
+              Explore my GitHub repo to begin your JavaScript learning journey.
+            </p>
+            <a
+              href="https://github.com/TarunPalTech/JavaScript-Part-1"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Want to Learn React?</h2>
+            <p>
+              Explore my GitHub repo to begin your ReactJS learning journey.
+            </p>
+            <a
+              href="https://github.com/TarunPalTech/ReactJS"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Do you want to Learn C?</h2>
+            <p>
+              Explore my GitHub repository to begin your C learning journey.
+            </p>
+            <a
+              href="https://github.com/TarunPalTech/c-practice-problems"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Do you want to learn C++?</h2>
+            <p>Explore my GitHub repo to begin your C++ learning journey.</p>
+            <a
+              href="https://github.com/TarunPalTech/cWithClassesOrCplusPlus"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Want to learn Python?</h2>
+            <p>Explore my GitHub repo to begin your Python learning journey.</p>
+            <a
+              href="https://github.com/TarunPalTech/Python"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Do you want to Learn DSA?</h2>
+            <p>
+              Explore my GitHub repo to begin your Data Stuctures & Algorithms
+              learning journey.
+            </p>
+            <a
+              href="https://github.com/TarunPalTech/DSA"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+          <div class="resume-sections card">
+            <h2>Want to Learn Tailwind?</h2>
+            <p>
+              Explore my GitHub repo to begin your Tailwind CSS learning
+              journey.
+            </p>
+            <a
+              href="https://github.com/TarunPalTech/TailwindCSS"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit my GitHub repo
+            </a>
+          </div>
+        </div>
+
+        <button id="next" class="nav-button">❯</button>
+      </div>
+    </section>
+
+    <!-- Developing section for skills -->
+    <section id="skills">
+      <h1>Skills</h1>
+      <div>
+        <div class="skillSection">
+          <h2>Programming & Frameworks</h2>
+          <ul>
+            <li>Python, Django</li>
+            <li>Node.js</li>
+            <li>C, C++</li>
+            <li>JavaScript (ES6+)</li>
+          </ul>
+        </div>
+        <div class="skillSection">
+          <h2>Python Libraries & Tools</h2>
+          <ul>
+            <li>NumPy, SciPy, Pandas, Matplotlib</li>
+            <li>Jupyter Notebook, Anakonda</li>
+          </ul>
+        </div>
+        <div class="skillSection">
+          <h2>Frontend Development</h2>
+          <ul>
+            <li>HTML5, CSS3</li>
+            <li>React, Next.js</li>
+            <li>Responsive Design, Flexbox, Grid</li>
+            <li>Basic UI/Ux Principles</li>
+          </ul>
+        </div>
+        <div class="skillSection">
+          <h2>Database</h2>
+          <ul>
+            <li>MongoDB</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div class="skillSection">
+          <h2>Version Control & Developer Tools</h2>
+          <ul>
+            <li>Git, GitHub</li>
+            <li>VS Code</li>
+            <li>Chrome DevTools</li>
+          </ul>
+        </div>
+        <div class="skillSection">
+          <h2>Design Tools</h2>
+          <ul>
+            <li>Figma</li>
+            <li>Canva</li>
+          </ul>
+        </div>
+        <div class="skillSection">
+          <h2>Design Tools</h2>
+          <ul>
+            <li>Problem-solving</li>
+            <li>Communication</li>
+            <li>Team collaboration</li>
+            <li>Canva</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developing Projects Section -->
+    <section id="projects">
+      <h1>Projects</h1>
+      <div>
+        <div class="project-sections">
+          <h2>SaaS-Style Dashboard (Admin Panel)</h2>
+          <p>
+            Build a polished, modern dashboard (like for managing users or sales
+            data).
+          </p>
+          <a href="#" class="project-button project-button1">View Project</a>
+          <a href="#" class="project-button project-button2"
+            >View Source Code</a
+          >
+        </div>
+        <div class="project-sections">
+          <h2>Full-Stack Social Platform MVP</h2>
+          <p>Build a small "social network" clone.</p>
+          <a href="#" class="project-button project-button1">View Project</a>
+          <a href="#" class="project-button project-button2"
+            >View Source Code</a
+          >
+        </div>
+        <div class="project-sections">
+          <h2>E-Commerce Store with Payment Integration</h2>
+          <p>Build a real shopping site.</p>
+          <a href="#" class="project-button project-button1">View Project</a>
+          <a href="#" class="project-button project-button2"
+            >View Source Code</a
+          >
+        </div>
+        <div class="project-sections">
+          <h2>Interactive Data Visualization Site</h2>
+          <p>Build a website that displays complex data beautifully.</p>
+          <a href="#" class="project-button project-button1">View Project</a>
+          <a href="#" class="project-button project-button2"
+            >View Source Code</a
+          >
+        </div>
+        <div class="project-sections">
+          <h2>Public API with Developer Portal</h2>
+          <p>Build and publish your own REST/GraphQL API with docs.</p>
+          <a href="#" class="project-button project-button1">View Project</a>
+          <a href="#" class="project-button project-button2"
+            >View Source Code</a
+          >
+        </div>
+        <div class="project-sections">
+          <h2>AI-Enhanced Web App</h2>
+          <p>
+            Use an LLM or image-generation API to build something interactive.
+          </p>
+          <a href="#" class="project-button project-button1">View Project</a>
+          <a href="#" class="project-button project-button2"
+            >View Source Code</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Developing Section for resume -->
+    <section id="resume">
+      <h1>Resume</h1>
+      <div>
+        <div class="resume-sections">
+          <h2>Want My Resume?</h2>
+          <p>Click the button below to download my resume in PDF format.</p>
+          <a href="TarunPal'sResume.pdf" download class="resume-button">
+            Download Resume
+          </a>
+        </div>
+        <div class="resume-sections">
+          <h2>Resume Preview</h2>
+          <p>Click the below button to preview my resume/CV.</p>
+          <a href="pages/resume-preview.html" class="resume-button" target="_blank">
+            Click to Preview
+          </a>
+        </div>
+        <div class="resume-sections">
+          <h2>Different Resume Formats</h2>
+          <p>
+            Download my resume in different regional formats, including German,
+            Spanish, and international styles.
+          </p>
+          <a href="pages/resumeFormats.html" class="resume-button" target="_blank">
+            See Different Formats
+          </a>
+        </div>
+        <div class="resume-sections">
+          <h2>Copy Resume Summary</h2>
+          <p>
+            Feel free to copy my resume summary below for easy reference or use.
+          </p>
+          <a href="" class="resume-button" onclick="copyResumeSummary()">
+            Click to Copy
+          </a>
+        </div>
+        <div class="resume-sections">
+          <h2>Resume Analytics (Advanced)</h2>
+          <p>Track views and downloads of my resume with built-in analytics.</p>
+          <a href="pages/resumeAnalytics.html" target="_blank" class="resume-button">
+            Click for Analytics
+          </a>
+        </div>
+        <div class="resume-sections">
+          <h2>QR Code of my resume for print</h2>
+          <p>
+            Scan QR Code to view and download my resume instantly on your
+            device.
+          </p>
+          <a
+            href="javascript: void(0)"
+            onclick="openPopup()"
+            class="resume-button"
+          >
+            See QR Code
+          </a>
+
+          <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="close" style="color: black" onclick="closePopup()"
+                >&times;</span
+              >
+              <h2>Scan QR Code to Download Resume</h2>
+              <img src="images/frame.png" width="200px" height="200px" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developing Section for Contact sections -->
+    <section id="contact">
+      <h1>Contact</h1>
+      <div>
+        <div>
+          <div>
+            <span class="material-icons">location_on</span>
+            <p>Pin Code - 243504</p>
+            <p>Post and Town Meerganj</p>
+            <p>Bareilly, Uttar Pradesh India</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span class="material-icons">phone</span>
+            <p><a href="tel:+91 8923083436">+91 8923083436</a></p>
+            <p><a href="tel:+91 9520929188">+91 9520929188</a></p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span class="material-icons">email</span>
+            <p>
+              <a href="mailto:paltarun832@gmail.com"> paltarun832@gmail.com</a>
+            </p>
+            <p><a href="mailto:palt48305@gmail.com">palt48305@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+      <h1 id="formTitle" style="font-family: serif; color: #fff">
+        Contact Form
+      </h1>
+      <div>
+        <form id="contactForm" method="post">
+          <div>
+            <label for="firstName">
+              First Name:
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="John"
+                required
+              />
+            </label>
+            <label for="lastName">
+              Last Name:
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Doe"
+                required
+              />
+            </label>
+          </div>
+          <label for="email">
+            Email:
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="xyz@gmail.com"
+              required
+            />
+          </label>
+          <label for="subject">
+            Subject:
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Selection"
+              required
+            />
+          </label>
+          <label for="message">
+            Message:
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Interested in your profile"
+            >
+  Contact Me!</textarea
+            >
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Developing footer section -->
+    <footer>
+      <div id="footerAbout">
+        <h2>About Us</h2>
+        <p>
+          I'm Tarun Pal, a Computer Science Engineer specializing in web and
+          software development. Dedicated to turning ideas into reliable,
+          user-friendly solutions. Open to global opportunities and always ready
+          to learn.
+        </p>
+      </div>
+      <div id="quickLinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#aboutUs">About Us</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="socialLinks">
+        <h2>Follow Me</h2>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/tarun.pal.133610" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="
+          https://www.linkedin.com/in/tarun-pal-87117518a"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TarunPalTech" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/TarunPal8923" target="_blank">
+              <i class="fab fa-x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/tarunpal399/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="newsLetter">
+        <h2>News Letter</h2>
+        <form id="emailForm">
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="Enter Email"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+        <p id="response"></p>
+      </div>
+      <section>
+        <p>© 2025 Tarun Pal – Thanks for visiting!</p>
+      </section>
+    </footer>
+  </body>
+</html>
